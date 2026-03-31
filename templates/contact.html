@@ -1,0 +1,20 @@
+    {% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section class="section">
+    <h1>Contact Me</h1>
+
+    {% if success_message %}
+        <p class="success-message">{{ success_message }}</p>
+    {% endif %}
+
+    <form method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+        <textarea name="message" rows="6" placeholder="Enter your message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+{% endblock %}
