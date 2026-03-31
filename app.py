@@ -21,7 +21,7 @@ projects_data = [
 
 @app.route("/")
 def home():
-    return render_template("home.html", name="Marielle Cabie")
+    return render_template("index.html", name="Marielle Cabie")
 
 @app.route("/projects")
 def projects():
