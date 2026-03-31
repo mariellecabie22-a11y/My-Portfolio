@@ -8,7 +8,7 @@ projects_data = [
         "description": "A website created for an alternative band, Deadlands. This project demonstrates my ability to structure content, apply styling, and design an engaging user interface.",
         "tech": "HTML, CSS",
         "link": "https://mariellecabie22-a11y.github.io/Deadlands",
-        "category": "webdesign"
+        "category": "webdesign" 
     },
     {
         "title": "Module 2 Javascript",
