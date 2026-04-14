@@ -4,20 +4,19 @@
 
 {% block content %}
 <section class="hero">
-    <div class="hero-text">
-        <h1>Hello, I'm Marielle Cabie</h1>
-<p>
-Registered Nurse transitioning into Software Development, building modern web applications with Flask, HTML, CSS, and JavaScript.
-</p>
-
-<p>
-Interested in creating efficient, user-centered solutions — especially within healthcare and digital systems.
-</p>
-        <a href="{{ url_for('projects') }}" class="btn">View My Projects</a>
-    </div>
-
     <div class="hero-image">
         <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Marielle Cabie">
+    </div>
+
+    <div class="hero-text">
+        <h1>Hello, I'm Marielle Cabie</h1>
+        <p>
+            Registered Nurse transitioning into Software Development, building modern web applications with Flask, HTML, CSS, and JavaScript.
+        </p>
+        <p>
+            Interested in creating efficient, user-centered solutions, especially within healthcare and digital systems.
+        </p>
+        <a href="{{ url_for('projects') }}" class="btn">View My Projects</a>
     </div>
 </section>
 {% endblock %}
