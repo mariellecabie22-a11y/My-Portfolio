@@ -184,6 +184,38 @@ header {
     font-weight: bold;
 }
 
+.suggestions-box {
+    margin-top: 20px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.suggestions-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.suggestions-box li {
+    padding: 10px;
+    border-bottom: 1px solid #334155;
+}
+
+.suggestion-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.suggestion-form input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    width: 300px;
+}
+
 .about-box {
     background: #1e293b;
     padding: 25px;
@@ -195,11 +227,12 @@ header {
     flex-direction: column;
     gap: 15px;
     max-width: 700px;
-    margin: auto;
+    margin: 20px auto 0;
 }
 
 .contact-form input,
 .contact-form textarea {
+    width: 100%;
     padding: 14px;
     border: none;
     border-radius: 8px;
@@ -208,8 +241,8 @@ header {
 
 .success-message {
     text-align: center;
+    margin-top: 15px;
     color: #4ade80;
-    margin-bottom: 20px;
     font-weight: bold;
 }
 

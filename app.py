@@ -8,24 +8,36 @@ projects_data = [
         "description": "A website created for an alternative band, Deadlands. This project demonstrates my ability to structure content, apply styling, and design an engaging user interface.",
         "tech": "HTML, CSS",
         "link": "https://mariellecabie22-a11y.github.io/Deadlands",
-        "category": "webdesign" 
+        "category": "webdesign"
     },
     {
         "title": "Module 2 Javascript",
         "description": "BrewLab is a project developed as part of my second module, showcasing my skills in HTML, CSS, and JavaScript. It demonstrates my ability to combine structured design with interactive functionality, creating a dynamic and user-friendly web experience.",
         "tech": "HTML, CSS, JavaScript",
         "link": "https://mariellecabie22-a11y.github.io/BrewLab",
-        "category": "JavaScript"
+        "category": "javascript"
     }
 ]
+
+suggestions_list = []
 
 @app.route("/")
 def home():
     return render_template("home.html", name="Marielle Cabie")
 
-@app.route("/projects")
+@app.route("/projects", methods=["GET", "POST"])
 def projects():
-    return render_template("projects.html", projects=projects_data)
+    if request.method == "POST":
+        suggestion = request.form.get("suggestion")
+
+        if suggestion:
+            suggestions_list.append(suggestion)
+
+    return render_template(
+        "projects.html",
+        projects=projects_data,
+        suggestions=suggestions_list
+    )
 
 @app.route("/skills")
 def skills():
@@ -43,9 +55,9 @@ def contact():
         message = request.form.get("message")
 
         print(name, email, message)
-        return render_template("contact.html", success="Message sent!")
+        return render_template("contact.html", success="Message sent!", name=name)
 
-    return render_template("contact.html", success=None)
+    return render_template("contact.html", success=None, name=None)
 
 if __name__ == "__main__":
     app.run(debug=True)

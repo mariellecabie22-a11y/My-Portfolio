@@ -9,7 +9,7 @@
     <div class="filter-buttons">
         <button type="button" onclick="filterProjects('all')">All</button>
         <button type="button" onclick="filterProjects('webdesign')">Web Design</button>
-        <button type="button" onclick="filterProjects('JavaScript')">JavaScript</button>
+        <button type="button" onclick="filterProjects('javascript')">JavaScript</button>
     </div>
 
     <div class="card-container">
@@ -22,5 +22,25 @@
         </div>
         {% endfor %}
     </div>
+
+<h2>Suggestions</h2>
+
+<form method="POST" class="contact-form">
+    <input type="text" name="suggestion" placeholder="Suggest a project idea..." required>
+    <button type="submit" class="btn">Submit</button>
+</form>
+
+<!-- Display all suggestions -->
+{% if suggestions %}
+<div class="suggestions-box">
+    <h3>Submitted Suggestions:</h3>
+    <ul>
+        {% for item in suggestions %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
 </section>
 {% endblock %}
