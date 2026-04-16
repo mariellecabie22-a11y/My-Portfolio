@@ -3,6 +3,9 @@
 # Render URL: 
 https://my-portfolio-tgea.onrender.com
 
+# Github repository:
+https://github.com/mariellecabie22-a11y/My-Portfolio
+
 # 📌 Project Overview
 
 This project is a portfolio web application developed using Flask, HTML, CSS, and JavaScript. The purpose of the application is to showcase my projects, technical skills, and background as I transition from a clinical healthcare role into software development.
