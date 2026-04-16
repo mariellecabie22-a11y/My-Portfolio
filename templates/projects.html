@@ -3,44 +3,63 @@
 {% block title %}Projects{% endblock %}
 
 {% block content %}
+
+<!-- Main section for displaying projects -->
 <section class="section">
     <h1>My Projects</h1>
 
+    <!-- Filter buttons allow users to filter projects by category using JavaScript -->
     <div class="filter-buttons">
         <button type="button" onclick="filterProjects('all')">All</button>
         <button type="button" onclick="filterProjects('webdesign')">Web Design</button>
         <button type="button" onclick="filterProjects('javascript')">JavaScript</button>
     </div>
 
+    <!-- Container for dynamically generated project cards -->
     <div class="card-container">
+
+        <!-- Loop through project data passed from Flask -->
         {% for project in projects %}
+
+        <!-- Each card includes a category class for filtering functionality -->
         <div class="card {{ project.category }}">
             <h2>{{ project.title }}</h2>
             <p>{{ project.description }}</p>
+
+            <!-- Display technologies used in the project -->
             <p><strong>Tech Stack:</strong> {{ project.tech }}</p>
+
+            <!-- External link to the live project -->
             <a href="{{ project.link }}" target="_blank" class="btn">View Project</a>
         </div>
+
         {% endfor %}
     </div>
 
-<h2>Suggestions</h2>
+    <!-- Suggestion form allows users to submit new project ideas -->
+    <h2>Suggestions</h2>
 
-<form method="POST" class="contact-form">
-    <input type="text" name="suggestion" placeholder="Suggest a project idea..." required>
-    <button type="submit" class="btn">Submit</button>
-</form>
+    <!-- Form uses POST method to send data to Flask backend -->
+    <form method="POST" class="contact-form">
+        <input type="text" name="suggestion" placeholder="Suggest a project idea..." required>
+        <button type="submit" class="btn">Submit</button>
+    </form>
 
-<!-- Display all suggestions -->
-{% if suggestions %}
-<div class="suggestions-box">
-    <h3>Submitted Suggestions:</h3>
-    <ul>
-        {% for item in suggestions %}
-        <li>{{ item }}</li>
-        {% endfor %}
-    </ul>
-</div>
-{% endif %}
+    <!-- Display submitted suggestions dynamically -->
+    {% if suggestions %}
+    <div class="suggestions-box">
+        <h3>Submitted Suggestions:</h3>
+        <ul>
+
+            <!-- Loop through all suggestions stored in Flask -->
+            {% for item in suggestions %}
+            <li>{{ item }}</li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    {% endif %}
 
 </section>
+
 {% endblock %}

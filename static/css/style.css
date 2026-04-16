@@ -1,9 +1,11 @@
+/* Reset default browser styles for consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base styling for the entire website */
 body {
     font-family: Arial, sans-serif;
     background: #0f172a;
@@ -11,14 +13,16 @@ body {
     line-height: 1.6;
 }
 
+/* Header and navigation bar styling */
 header {
     background: #1e293b;
     padding: 15px 40px;
-    position: sticky;
+    position: sticky; /* Keeps navbar fixed at top */
     top: 0;
     z-index: 1000;
 }
 
+/* Navigation layout using Flexbox */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -26,12 +30,14 @@ header {
     gap: 20px;
 }
 
+/* Logo styling */
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #38bdf8;
 }
 
+/* Navigation links container */
 .nav-links {
     list-style: none;
     display: flex;
@@ -39,20 +45,23 @@ header {
     flex-wrap: wrap;
 }
 
+/* Navigation links styling */
 .nav-links a {
     color: #f8fafc;
     text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
 
+/* Hover effect for navigation links */
 .nav-links a:hover {
     color: #38bdf8;
 }
 
+/* Hero section (landing section) */
 .hero {
     min-height: 80vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stacks image and text vertically */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -61,45 +70,53 @@ header {
     gap: 25px;
 }
 
+/* Container for profile image */
 .hero-image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Profile image styling */
 .hero-image img {
     width: 190px;
     height: 190px;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular image */
     object-fit: cover;
     border: 4px solid #38bdf8;
     transition: transform 0.3s ease;
 }
 
+/* Hover animation for profile image */
 .hero-image img:hover {
     transform: scale(1.05);
 }
 
+/* Hero text container */
 .hero-text {
     max-width: 750px;
     margin: 0 auto;
 }
 
+/* Main heading styling */
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
+/* Paragraph text styling */
 .hero-text p {
     font-size: 1.15rem;
     max-width: 700px;
     margin: 0 auto 18px;
 }
 
+/* Button spacing inside hero */
 .hero-text .btn {
     margin-top: 10px;
 }
 
+/* General button styling */
 .btn {
     display: inline-block;
     background: #38bdf8;
@@ -113,11 +130,13 @@ header {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
+/* Button hover effect */
 .btn:hover {
     background: #0ea5e9;
     transform: translateY(-2px);
 }
 
+/* Light mode theme (toggled via JavaScript) */
 .light-mode {
     background: #ffffff;
     color: #000000;
@@ -127,6 +146,7 @@ header {
     background: #cbd5e1;
 }
 
+/* Adjust card colors in light mode */
 .light-mode .card,
 .light-mode .about-box,
 .light-mode .suggestions-box {
@@ -143,6 +163,7 @@ header {
     color: #000000;
 }
 
+/* General section styling */
 .section {
     padding: 60px 40px;
     max-width: 1100px;
@@ -150,6 +171,7 @@ header {
     text-align: center;
 }
 
+/* Section headings */
 .section h1 {
     margin-bottom: 30px;
     font-size: 2.2rem;
@@ -160,26 +182,31 @@ header {
     margin-bottom: 15px;
 }
 
+/* Paragraph spacing */
 .section p {
     margin-bottom: 15px;
 }
 
+/* About page container */
 .about-section {
     max-width: 900px;
     margin: auto;
 }
 
+/* About text width control for readability */
 .about-section p {
     max-width: 800px;
     margin: 0 auto 15px;
 }
 
+/* Project cards layout using CSS Grid */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
+/* Individual project card styling */
 .card {
     background: #1e293b;
     padding: 25px;
@@ -188,19 +215,23 @@ header {
     transition: transform 0.3s ease;
 }
 
+/* Hover animation for cards */
 .card:hover {
     transform: translateY(-6px);
 }
 
+/* Button spacing inside cards */
 .card .btn {
     margin-top: 10px;
 }
 
+/* Filter button section */
 .filter-buttons {
     text-align: center;
     margin-bottom: 30px;
 }
 
+/* Filter buttons styling */
 .filter-buttons button {
     margin: 5px;
     padding: 10px 16px;
@@ -210,13 +241,14 @@ header {
     color: #0f172a;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s ease;
 }
 
+/* Hover effect for filter buttons */
 .filter-buttons button:hover {
     background: #0ea5e9;
 }
 
+/* Skills section layout */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -225,6 +257,7 @@ header {
     margin-bottom: 20px;
 }
 
+/* Individual skill badge */
 .skill-badge {
     background: #2563eb;
     padding: 12px 18px;
@@ -232,6 +265,7 @@ header {
     font-weight: bold;
 }
 
+/* Suggestions box styling */
 .suggestions-box {
     margin-top: 20px;
     background: #1e293b;
@@ -239,6 +273,7 @@ header {
     border-radius: 10px;
 }
 
+/* Suggestions list */
 .suggestions-box ul {
     list-style: none;
     padding: 0;
@@ -249,6 +284,7 @@ header {
     border-bottom: 1px solid #334155;
 }
 
+/* Suggestion form layout */
 .suggestion-form {
     display: flex;
     gap: 10px;
@@ -257,6 +293,7 @@ header {
     flex-wrap: wrap;
 }
 
+/* Suggestion input styling */
 .suggestion-form input {
     padding: 12px;
     border-radius: 8px;
@@ -264,12 +301,7 @@ header {
     width: 300px;
 }
 
-.about-box {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 12px;
-}
-
+/* Contact form layout */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -278,6 +310,7 @@ header {
     margin: 20px auto 0;
 }
 
+/* Input fields styling */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -287,6 +320,7 @@ header {
     font-size: 1rem;
 }
 
+/* Success message styling */
 .success-message {
     text-align: center;
     margin-top: 15px;
@@ -294,6 +328,7 @@ header {
     font-weight: bold;
 }
 
+/* Footer styling */
 footer {
     text-align: center;
     padding: 20px;
@@ -301,7 +336,7 @@ footer {
     margin-top: 30px;
 }
 
-/* Tablet and mobile */
+/* Responsive design for tablets and mobile devices */
 @media (max-width: 768px) {
     header {
         padding: 15px 20px;
@@ -313,27 +348,7 @@ footer {
     }
 
     .nav-links {
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
-    }
-
-    .nav-links a {
-        font-size: 0.95rem;
-    }
-
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 40px 20px;
-        gap: 20px;
-        min-height: auto;
-    }
-
-    .hero-text {
-        max-width: 100%;
     }
 
     .hero-text h1 {
@@ -344,122 +359,23 @@ footer {
         font-size: 1rem;
     }
 
-    .hero-image img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .section {
-        padding: 40px 20px;
-    }
-
-    .section h1 {
-        font-size: 1.8rem;
-    }
-
-    .section h2 {
-        font-size: 1.3rem;
-    }
-
     .card-container {
         grid-template-columns: 1fr;
     }
-
-    .card {
-        padding: 20px;
-    }
-
-    .contact-form {
-        width: 100%;
-    }
-
-    .suggestion-form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .suggestion-form input {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    .filter-buttons button,
-    .btn {
-        width: auto;
-        max-width: 100%;
-    }
-
-    footer {
-        padding: 12px;
-    }
 }
 
-/* Small phones */
+/* Extra small devices (phones) */
 @media (max-width: 480px) {
-    header {
-        padding: 12px 15px;
-    }
-
     .logo {
         font-size: 1.3rem;
-    }
-
-    .nav-links {
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-
-   .hero {
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-    background: linear-gradient(135deg, #0f172a, #1d4ed8);
-    }
-
-    .hero-text {
-    max-width: 600px;
     }
 
     .hero-text h1 {
         font-size: 1.7rem;
     }
 
-    .hero-text p {
-        font-size: 0.95rem;
-    }
-
     .hero-image img {
         width: 150px;
         height: 150px;
-    }
-
-    .section {
-        padding: 30px 15px;
-    }
-
-    .section h1 {
-        font-size: 1.6rem;
-    }
-
-    .card {
-        padding: 18px;
-    }
-
-    .btn,
-    .filter-buttons button {
-        padding: 10px 16px;
-        font-size: 0.95rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .suggestion-form input {
-        font-size: 0.95rem;
     }
 }

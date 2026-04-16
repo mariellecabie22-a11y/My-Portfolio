@@ -3,18 +3,39 @@
 {% block title %}Project Details{% endblock %}
 
 {% block content %}
+
+<!-- Section displaying detailed explanations of each project -->
 <section class="section">
     <h1>Project Explanations</h1>
 
+    <!-- Loop through all projects passed from Flask backend -->
     {% for project in projects %}
+
+    <!-- Card layout used to display each project's detailed information -->
     <div class="card">
+
+        <!-- Project title -->
         <h2>{{ project.title }}</h2>
+
+        <!-- Brief overview of the project -->
         <p><strong>Overview:</strong> {{ project.description }}</p>
+
+        <!-- Technologies used in the project -->
         <p><strong>Technologies Used:</strong> {{ project.tech }}</p>
+
+        <!-- Detailed explanation of how the project was built -->
         <p><strong>Project Explanation:</strong> {{ project.explanation }}</p>
+
+        <!-- Key learning outcomes from the project -->
         <p><strong>What I Learned:</strong> {{ project.learning }}</p>
+
+        <!-- External link to the live project -->
         <a href="{{ project.link }}" target="_blank" class="btn">View Project</a>
+
     </div>
+
     {% endfor %}
+
 </section>
+
 {% endblock %}

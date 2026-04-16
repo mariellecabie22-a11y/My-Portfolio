@@ -3,19 +3,35 @@
 {% block title %}Contact{% endblock %}
 
 {% block content %}
+
+<!-- Contact section allowing users to send a message -->
 <section class="section">
     <h1>Contact Me</h1>
 
+    <!-- Display success message after form submission -->
     {% if success %}
         <p class="success-message">{{ success }}</p>
+
+        <!-- Personalised response using user's name -->
         <p class="success-message">Thank you {{ name }}. I will get back to you soon.</p>
     {% endif %}
 
+    <!-- Contact form using POST method to send data to Flask backend -->
     <form method="POST" class="contact-form">
+
+        <!-- Input field for user's name -->
         <input type="text" name="name" placeholder="Enter your name" required>
+
+        <!-- Input field for user's email -->
         <input type="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Textarea for user's message -->
         <textarea name="message" rows="6" placeholder="Enter your message" required></textarea>
+
+        <!-- Submit button -->
         <button type="submit" class="btn">Send Message</button>
+
     </form>
 </section>
+
 {% endblock %}
